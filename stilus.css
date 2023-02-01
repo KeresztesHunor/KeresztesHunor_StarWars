@@ -7,6 +7,8 @@ body {
 }
 
 main {
+  width: 70%;
+  margin: auto;
   display: grid;
   grid-template-areas:
     "h h"
@@ -39,14 +41,47 @@ nav {
 
 article {
   grid-area: a;
-  height: 40vh;
+}
+
+fieldset {
+  margin: 15px;
+  padding: 15px;
+  border: 2px solid white;
+}
+
+legend {
+  width: 20%;
+  text-align: right;
+  background-color: beige;
+  color: rgb(88, 23, 23);
+  border-radius: 5px;
+  padding: 2px 30px;
+}
+
+input,
+label {
+  margin-top: 20px;
+}
+
+label {
+  width: 20%;
+  float: left;
+  margin-right: 20px;
+}
+
+input {
+  padding: 5px;
+}
+
+input[type=submit] {
+  margin: auto;
 }
 
 footer {
   grid-area: f;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   header,
   nav,
   article,
@@ -56,6 +91,11 @@ footer {
 
   main {
     grid-template-columns: 2fr 1fr;
+  }
+
+  legend {
+    width: 50%;
+    text-align: center;
   }
 }
 
